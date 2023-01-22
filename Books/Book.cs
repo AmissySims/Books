@@ -26,7 +26,7 @@ namespace Books
         public Nullable<int> CurrentDiscount { get; set; }
         public Nullable<int> Count { get; set; }
         public string Description { get; set; }
-        public byte[] Image { get; set; }
+        public string Image { get; set; }
     
         public virtual Category Category { get; set; }
         public virtual PublishingHouse PublishingHouse { get; set; }
