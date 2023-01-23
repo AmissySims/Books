@@ -4,13 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="9e5f1c264c2f424fa174adb1d1709d3f" Name="Diagram1">
+      <Diagram DiagramId="7dbdbd26db5443cda4c678c30113ffe0" Name="Diagram1">
         <EntityTypeShape EntityType="BooksModel.Book" Width="1.5" PointX="3" PointY="1" />
-        <EntityTypeShape EntityType="BooksModel.Category" Width="1.5" PointX="0.75" PointY="2.375" />
-        <EntityTypeShape EntityType="BooksModel.PublishingHouse" Width="1.5" PointX="0.75" PointY="10.25" />
-        <EntityTypeShape EntityType="BooksModel.Supplier" Width="1.5" PointX="0.75" PointY="7.875" />
-        <EntityTypeShape EntityType="BooksModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BooksModel.Unit" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="BooksModel.Category" Width="1.5" PointX="0.75" PointY="7.875" />
+        <EntityTypeShape EntityType="BooksModel.PublishingHouse" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="BooksModel.Supplier" Width="1.5" PointX="0.75" PointY="10.25" />
+        <EntityTypeShape EntityType="BooksModel.Unit" Width="1.5" PointX="0.75" PointY="2.375" />
         <AssociationConnector Association="BooksModel.FK_Book_Category" />
         <AssociationConnector Association="BooksModel.FK_Book_PublishingHouse" />
         <AssociationConnector Association="BooksModel.FK_Book_Supplier" />

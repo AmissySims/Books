@@ -29,7 +29,6 @@ namespace Books
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<PublishingHouse> PublishingHouse { get; set; }
         public virtual DbSet<Supplier> Supplier { get; set; }
-        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Unit> Unit { get; set; }
     }
 }
