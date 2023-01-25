@@ -44,6 +44,16 @@
           <Property Name="Id" Type="int" Nullable="false" />
           <Property Name="Title" Type="nvarchar(max)" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="principal_id" Type="int" Nullable="false" />
+          <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="version" Type="int" />
+          <Property Name="definition" Type="varbinary(max)" />
+        </EntityType>
         <EntityType Name="Unit">
           <Key>
             <PropertyRef Name="Id" />
@@ -104,6 +114,7 @@
           <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="PublishingHouse" EntityType="Self.PublishingHouse" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Unit" EntityType="Self.Unit" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Book_Category" Association="Self.FK_Book_Category">
             <End Role="Category" EntitySet="Category" />
@@ -126,11 +137,12 @@
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BooksModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-        <EntityContainer Name="BooksEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="BooksEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Book" EntityType="BooksModel.Book" />
           <EntitySet Name="Category" EntityType="BooksModel.Category" />
           <EntitySet Name="PublishingHouse" EntityType="BooksModel.PublishingHouse" />
           <EntitySet Name="Supplier" EntityType="BooksModel.Supplier" />
+          <EntitySet Name="sysdiagrams" EntityType="BooksModel.sysdiagrams" />
           <EntitySet Name="Unit" EntityType="BooksModel.Unit" />
           <AssociationSet Name="FK_Book_Category" Association="BooksModel.FK_Book_Category">
             <End Role="Category" EntitySet="Category" />
@@ -195,6 +207,16 @@
           <Property Name="Title" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Book" Relationship="BooksModel.FK_Book_Supplier" FromRole="Supplier" ToRole="Book" />
         </EntityType>
+        <EntityType Name="sysdiagrams">
+          <Key>
+            <PropertyRef Name="diagram_id" />
+          </Key>
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+          <Property Name="principal_id" Type="Int32" Nullable="false" />
+          <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="version" Type="Int32" />
+          <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+        </EntityType>
         <EntityType Name="Unit">
           <Key>
             <PropertyRef Name="Id" />
@@ -256,7 +278,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="Хранилище BooksModelContainer" CdmEntityContainer="BooksEntities">
+        <EntityContainerMapping StorageEntityContainer="Хранилище BooksModelContainer" CdmEntityContainer="BooksEntities1">
           <EntitySetMapping Name="Book">
             <EntityTypeMapping TypeName="BooksModel.Book">
               <MappingFragment StoreEntitySet="Book">
@@ -297,6 +319,17 @@
               <MappingFragment StoreEntitySet="Supplier">
                 <ScalarProperty Name="Title" ColumnName="Title" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sysdiagrams">
+            <EntityTypeMapping TypeName="BooksModel.sysdiagrams">
+              <MappingFragment StoreEntitySet="sysdiagrams">
+                <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

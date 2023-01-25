@@ -13,10 +13,10 @@ namespace Books
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BooksEntities : DbContext
+    public partial class BooksEntities1 : DbContext
     {
-        public BooksEntities()
-            : base("name=BooksEntities")
+        public BooksEntities1()
+            : base("name=BooksEntities1")
         {
         }
     
@@ -29,6 +29,7 @@ namespace Books
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<PublishingHouse> PublishingHouse { get; set; }
         public virtual DbSet<Supplier> Supplier { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<Unit> Unit { get; set; }
     }
 }

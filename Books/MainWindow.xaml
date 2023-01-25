@@ -43,7 +43,8 @@
                                     </StackPanel>
                                     <StackPanel Orientation="Horizontal">
                                         <TextBlock Text="Цена: "/>
-                                        <TextBlock Text="{Binding Cost}"/>
+                                        <TextBlock Text="{Binding Cost}" TextDecorations="{Binding CostText}"/>
+                                        <TextBlock Text="{Binding NowCost}"/>
                                     </StackPanel>
                                 </StackPanel>
                             </Border>
