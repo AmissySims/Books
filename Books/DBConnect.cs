@@ -8,6 +8,6 @@ namespace Books
 {
     internal class DBConnect
     {
-        public static BooksEntities1 db = new BooksEntities1();
+        public static BooksEntities2 db = new BooksEntities2();
     }
 }

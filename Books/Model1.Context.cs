@@ -13,10 +13,10 @@ namespace Books
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class BooksEntities1 : DbContext
+    public partial class BooksEntities2 : DbContext
     {
-        public BooksEntities1()
-            : base("name=BooksEntities1")
+        public BooksEntities2()
+            : base("name=BooksEntities2")
         {
         }
     

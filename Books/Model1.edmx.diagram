@@ -4,17 +4,17 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="97c32229c34549abb5da600d9d0dfb70" Name="Diagram1">
-        <EntityTypeShape EntityType="BooksModel.Book" Width="1.5" PointX="3" PointY="1" />
-        <EntityTypeShape EntityType="BooksModel.Category" Width="1.5" PointX="0.75" PointY="2.375" />
-        <EntityTypeShape EntityType="BooksModel.PublishingHouse" Width="1.5" PointX="0.75" PointY="5.5" />
-        <EntityTypeShape EntityType="BooksModel.Supplier" Width="1.5" PointX="0.75" PointY="10.25" />
-        <EntityTypeShape EntityType="BooksModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" />
-        <EntityTypeShape EntityType="BooksModel.Unit" Width="1.5" PointX="0.75" PointY="7.875" />
-        <AssociationConnector Association="BooksModel.FK_Book_Category" />
-        <AssociationConnector Association="BooksModel.FK_Book_PublishingHouse" />
-        <AssociationConnector Association="BooksModel.FK_Book_Supplier" />
-        <AssociationConnector Association="BooksModel.FK_Book_Unit" />
+      <Diagram DiagramId="9c86fa29cc6b4b8fbc0a848e4258183a" Name="Diagram1">
+        <EntityTypeShape EntityType="BooksModel.Book" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="BooksModel.Category" Width="1.5" PointX="0.75" PointY="2.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="BooksModel.PublishingHouse" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="BooksModel.Supplier" Width="1.5" PointX="0.75" PointY="7.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="BooksModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="BooksModel.Unit" Width="1.5" PointX="0.75" PointY="10.25" IsExpanded="true" />
+        <AssociationConnector Association="BooksModel.FK_Book_Category" ManuallyRouted="false" />
+        <AssociationConnector Association="BooksModel.FK_Book_PublishingHouse" ManuallyRouted="false" />
+        <AssociationConnector Association="BooksModel.FK_Book_Supplier" ManuallyRouted="false" />
+        <AssociationConnector Association="BooksModel.FK_Book_Unit" ManuallyRouted="false" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
